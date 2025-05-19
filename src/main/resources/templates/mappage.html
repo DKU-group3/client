@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TAGGO</title>
+  <link rel="stylesheet" href="/css/mappage.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <button class="nav-button">☰</button>
+      <nav class="nav-popup hidden">
+        <ul>
+          <li><a href="#">Search with LLM</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Main</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Map View -->
+    <main class="map-view">
+      <!-- 지도 API가 여기 들어감 -->
+      <div id="map">지도 로딩 중...</div>
+    </main>
+
+    <!-- Shop List -->
+    <section class="shop-list">
+      <!-- JS로 동적으로 카드 렌더링 가능 -->
+      <div class="shop-card">가게 카드 예시</div>
+      <div class="shop-card">가게 카드 예시</div>
+    </section>
+
+    <!-- Tag Filter -->
+    <footer class="tag-filter">
+      <div class="tag-section">
+        <h4>Restaurant Type</h4>
+        <button>Cafe</button><button>Dessert</button><button>Grilled</button>
+      </div>
+      <div class="tag-section">
+        <h4>Atmosphere</h4>
+        <button>Calm</button><button>Relaxing</button>
+      </div>
+      <!-- 계속 추가 가능 -->
+      <button class="search-button">GO! search</button>
+    </footer>
+
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>

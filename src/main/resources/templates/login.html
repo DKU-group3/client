@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인 페이지</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/login.css">
+  <script defer src="/js/login.js"></script>
+</head>
+<body>
+  <div class="cont">
+    <!-- 로그인 폼 -->
+    <div class="form sign-in">
+      <h2>TAGGO 로그인 👋</h2>
+      <label>
+        <span>Email</span>
+        <input type="email" id="loginEmail" />
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" id="loginPassword" />
+      </label>
+      <button type="button" class="submit" id="loginBtn">로그인</button>
+    </div>
+
+    <!-- 회원가입 폼 -->
+    <div class="form sign-up">
+      <h2>TAGGO 회원가입 ✨</h2>
+      <label>
+        <span>Name</span>
+        <input type="text" />
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" />
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" />
+      </label>
+      <button type="button" class="submit">회원가입</button>
+    </div>
+
+    <!-- 전환 버튼 & 배경 -->
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img__text m--up">
+          <h2>처음 오셨나요?</h2>
+          <p>회원가입하고 더 많은 기능을 경험해보세요!</p>
+        </div>
+        <div class="img__text m--in">
+          <p>계정이 있다면 바로 로그인하세요.</p>
+        </div>
+        <div class="img__btn" id="switchBtn">회원가입 / 로그인</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

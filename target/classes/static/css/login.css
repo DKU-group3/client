@@ -1,0 +1,238 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    max-width: 400px;
+}
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.subtitle {
+    font-size: 0.9rem;
+    color: #555;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.signup-btn {
+    background-color: #355e2b;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.signin-link {
+    margin-top: 15px;
+}
+.signin-link a {
+    color: blue;
+    text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: #f4fff6;
+}
+
+.cont {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  transition: 0.6s ease-in-out;
+}
+
+.form {
+  width: 50%;
+  padding: 60px 40px;
+  background: #eaffea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s ease-in-out;
+  position: relative;
+}
+
+.form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+label {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+label span {
+  font-size: 13px;
+  color: #4CAF50;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #c8e6c9;
+  background: #fff;
+  font-size: 14px;
+}
+
+.submit {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  background-color: #43a047;
+}
+
+.sign-up {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cont.s--signup .sign-in {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.cont.s--signup .sign-up {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+/* 이미지 배경 */
+.sub-cont {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.img:before {
+  content: "";
+  background-image: url("https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?q=80&w=1935");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: brightness(0.5);
+}
+
+.img:after {
+  content: "";
+  background : transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* 이미지 텍스트 */
+.img__text {
+  z-index: 2;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px 0;
+}
+
+.img__text h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.img__text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 전환 텍스트 애니메이션 */
+.img__text.m--in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.5s ease-in-out;
+}
+
+.img__text.m--up {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.cont.s--signup .img__text.m--up {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.cont.s--signup .img__text.m--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 버튼 */
+.img__btn {
+  z-index: 2;
+  position: relative;
+  margin: 40px auto 0;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: transparent;
+}
+
+.img__btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
