@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Sidebar toggle
     const sidebar = document.getElementById("sidebar");
     const toggleBtn = document.getElementById("toggleBtn");
     const container = document.querySelector(".container");
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
       container.style.marginLeft = sidebar.classList.contains("collapsed") ? "60px" : "200px";
     });
   
-    // Profile edit form toggle
     const editBtn = document.querySelector(".edit-toggle-btn");
     const profileForm = document.querySelector(".profile-form");
   
