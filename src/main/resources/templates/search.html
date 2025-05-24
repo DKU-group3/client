@@ -1,100 +1,109 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>검색 페이지</title>
+
   <link rel="stylesheet" href="/css/search.css">
+  <script defer src="/js/sidebar.js"></script>
   <script defer src="/js/search.js"></script>
 </head>
 <body>
 
-  <div class="top-nav">
-    <button data-scroll="#region">지역</button>
-    <button data-scroll="#mood">분위기</button>
-    <button data-scroll="#price">가격</button>
-    <button data-scroll="#food">종류</button>
-    <button data-scroll="#facility">편의시설</button>
+  <!-- 사이드바 포함 -->
+  <th:block th:replace="fragments/sidebar :: sidebar"></th:block>
+
+  <div class="container">
+
+    <div class="top-nav">
+      <button data-scroll="#region">지역</button>
+      <button data-scroll="#mood">분위기</button>
+      <button data-scroll="#price">가격</button>
+      <button data-scroll="#food">종류</button>
+      <button data-scroll="#facility">편의시설</button>
+    </div>
+
+    <div class="selected-tags-container">
+      <div class="selected-tags" id="selectedTags"></div>
+      <button id="clearAll" class="clear-button">초기화</button>
+    </div>
+
+    <p class="guide-text">🌿 원하는 조건을 선택해서 매장을 찾아보세요!</p>
+
+
+    <main>
+      <!-- 필터 섹션들 생략 없이 포함 -->
+      <section id="region" class="category-section" data-single="true">
+        <h2>📍 지역</h2>
+        <div class="tag-list">
+          <button class="tag">서울</button>
+          <button class="tag">경기</button>
+          <button class="tag">인천</button>
+          <button class="tag">부산</button>
+          <button class="tag">제주</button>
+        </div>
+      </section>
+
+      <section id="mood" class="category-section" data-single="false">
+        <h2>🎈 분위기</h2>
+        <div class="tag-list">
+          <button class="tag">데이트</button>
+          <button class="tag">단체회식</button>
+          <button class="tag">핫플</button>
+          <button class="tag">가족모임</button>
+          <button class="tag">전통적</button>
+          <button class="tag">뷰맛집</button>
+          <button class="tag">트렌디</button>
+          <button class="tag">혼밥</button>
+          <button class="tag">기념일</button>
+          <button class="tag">조용한</button>
+        </div>
+      </section>
+
+      <section id="price" class="category-section" data-single="true">
+        <h2>💰 가격</h2>
+        <div class="tag-list">
+          <button class="tag">~1만원</button>
+          <button class="tag">1~2만원</button>
+          <button class="tag">2~3만원</button>
+          <button class="tag">3만원 이상</button>
+        </div>
+      </section>
+
+      <section id="food" class="category-section" data-single="true">
+        <h2>🍽️ 음식 종류</h2>
+        <div class="tag-list">
+          <button class="tag">한식</button>
+          <button class="tag">중식</button>
+          <button class="tag">일식</button>
+          <button class="tag">양식</button>
+          <button class="tag">이탈리아음식</button>
+          <button class="tag">프랑스음식</button>
+          <button class="tag">베트남음식</button>
+          <button class="tag">인도음식</button>
+          <button class="tag">기타 세계음식</button>
+          <button class="tag">술집</button>
+          <button class="tag">카페</button>
+        </div>
+      </section>
+
+      <section id="facility" class="category-section" data-single="false">
+        <h2>🏷️ 편의시설</h2>
+        <div class="tag-list">
+          <button class="tag">주차</button>
+          <button class="tag">반려 동반</button>
+          <button class="tag">노키즈존</button>
+          <button class="tag">미쉐린</button>
+          <button class="tag">와이파이</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottom-bar">
+      <button class="search-button">선택한 조건으로 검색</button>
+    </footer>
+
   </div>
-
-  <div class="selected-tags-container">
-    <div class="selected-tags" id="selectedTags"></div>
-    <button id="clearAll" class="clear-button">초기화</button>
-  </div>
-
-  <p class="guide-text">🌿 원하는 조건을 선택해서 매장을 찾아보세요!</p>
-
-  <main>
-    <section id="region" class="category-section" data-single="true">
-      <h2>📍 지역</h2>
-      <div class="tag-list">
-        <button class="tag">서울</button>
-        <button class="tag">경기</button>
-        <button class="tag">인천</button>
-        <button class="tag">부산</button>
-        <button class="tag">제주</button>
-      </div>
-    </section>
-
-    <section id="mood" class="category-section" data-single="false">
-      <h2>🎈 분위기</h2>
-      <div class="tag-list">
-        <button class="tag">데이트</button>
-        <button class="tag">단체회식</button>
-        <button class="tag">핫플</button>
-        <button class="tag">가족모임</button>
-        <button class="tag">전통적</button>
-        <button class="tag">뷰맛집</button>
-        <button class="tag">트렌디</button>
-        <button class="tag">혼밥</button>
-        <button class="tag">기념일</button>
-        <button class="tag">조용한한</button>
-      </div>
-    </section>
-
-    <section id="price" class="category-section" data-single="true">
-      <h2>💰 가격</h2>
-      <div class="tag-list">
-        <button class="tag">~1만원</button>
-        <button class="tag">1~2만원</button>
-        <button class="tag">2~3만원</button>
-        <button class="tag">3만원 이상</button>
-      </div>
-    </section>
-
-    <section id="food" class="category-section" data-single="true">
-      <h2>🍽️ 음식 종류</h2>
-      <div class="tag-list">
-        <button class="tag">한식</button>
-        <button class="tag">중식</button>
-        <button class="tag">일식</button>
-        <button class="tag">양식</button>
-        <button class="tag">이탈리아음식</button>
-        <button class="tag">프랑스음식</button>
-        <button class="tag">베트남음식</button>
-        <button class="tag">인도음식</button>
-        <button class="tag">기타 세계음식</button>
-        <button class="tag">술집</button>
-        <button class="tag">카페</button>
-      </div>
-    </section>
-
-    <section id="facility" class="category-section" data-single="false">
-      <h2>🏷️ 편의시설</h2>
-      <div class="tag-list">
-        <button class="tag">주차</button>
-        <button class="tag">반려 동반</button>
-        <button class="tag">노키즈존</button>
-        <button class="tag">미쉐린</button>
-        <button class="tag">와이파이</button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bottom-bar">
-    <button class="search-button">선택한 조건으로 검색</button>
-  </footer>
-
-  <script src="search.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+<!-- templates/fragments/sidebar.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+  <aside th:fragment="sidebar" class="sidebar collapsed" id="sidebar">
+    <div class="sidebar-title">
+      <span id="toggleBtn">☰</span>
+      <span class="sidebar-label">Navigation Bar</span>
+    </div>
+    <nav class="nav-popup">
+      <ul>
+        <li><a href="/mappage">📍 <span class="nav-text">Map Page</span></a></li>
+        <li><a href="/search">🔍 <span class="nav-text">Search</span></a></li>
+        <li><a href="/mypage">👤 <span class="nav-text">My Profile</span></a></li>
+        <li><a href="/label">🏷️ <span class="nav-text">Tags</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+</body>
+</html>

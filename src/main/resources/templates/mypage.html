@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>My Page</title>
+  <link rel="stylesheet" href="/css/mypage.css">
+  <script defer src="/js/mypage.js"></script>
+</head>
+<body>
+
+  <!-- 사이드바 -->
+  <aside class="sidebar collapsed" id="sidebar">
+    <div class="sidebar-title">
+      <span id="toggleBtn">☰</span>
+      <span class="sidebar-label">Navigation Bar</span>
+    </div>
+    <nav class="nav-popup">
+        <ul>
+          <li><a href="/mappage">📍 <span class="nav-text">Map Page</span></a></li>
+          <li><a href="/search">🔍 <span class="nav-text">Search</span></a></li>
+          <li><a href="/mypage">👤 <span class="nav-text">My Profile</span></a></li>
+          <li><a href="/label">🏷️ <span class="nav-text">Tags</span></a></li>
+        </ul>
+      </nav>
+  </aside>
+
+  <!-- 메인 컨테이너 -->
+  <div class="container">
+
+    <!-- 프로필 -->
+    <section class="profile">
+      <div class="profile-header">
+        <img src="/img/프로필사진.png" class="avatar" alt="profile">
+        <div class="profile-info">
+          <h3>Alexa Rawles</h3>
+          <p><strong>Email:</strong> alexrawles@gmail.com</p>
+          <p><strong>Birthday:</strong> 1998-05-21</p>
+          <p><strong>Phone:</strong> 010-1234-5678</p>
+          <p><strong>Tags:</strong> Cafe, Quiet, Parking</p>
+          <button class="edit-toggle-btn">Edit</button>
+        </div>
+      </div>
+      <form class="profile-form hidden">
+        <input type="text" placeholder="Full Name" value="Alexa Rawles">
+        <input type="text" placeholder="Nick Name" value="Lex">
+        <input type="email" placeholder="Email" value="alexrawles@gmail.com">
+        <input type="date" placeholder="Birthday" value="1998-05-21">
+        <input type="text" placeholder="Phone Number" value="010-1234-5678">
+        <input type="text" placeholder="Preferred Tags" value="Cafe, Quiet, Parking">
+        <button type="submit" class="save-btn">Save</button>
+      </form>
+    </section>
+
+    <!-- 내가 쓴 리뷰 -->
+    <section class="reviews">
+      <h2>My Reviews <span class="review-count">3</span></h2>
+
+      <div class="review-card" data-id="1">
+        <div class="review-header">
+          <img class="review-avatar" src="/img/스타벅스죽전단국대점.png" alt="avatar">
+          <div class="review-info">
+            <h3>St Glx <span class="region">South London</span></h3>
+            <p class="date">📅 24th September, 2023</p>
+            <p class="stars">★★★★★</p>
+          </div>
+        </div>
+        <p class="review-text">
+          스타벅스 죽전 단국대점<br>
+          The positive aspect was undoubtedly the efficiency of the service.
+          The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard – hot and satisfying.
+        </p>
+        <button class="edit-review-btn">✏️</button>
+      </div>
+
+      <div class="review-card" data-id="2">
+        <div class="review-header">
+          <img class="review-avatar" src="/img/컴포즈커피.png" alt="avatar">
+          <div class="review-info">
+            <h3>Compost Coffee <span class="region">East Seoul</span></h3>
+            <p class="date">📅 11th August, 2023</p>
+            <p class="stars">★★★★☆</p>
+          </div>
+        </div>
+        <p class="review-text">아늑하고 조용한 분위기에서 집중하기 좋았음. 커피 퀄리티도 훌륭했고 직원이 매우 친절했음.</p>
+        <button class="edit-review-btn">✏️</button>
+      </div>
+
+      <div class="review-card" data-id="3">
+        <div class="review-header">
+          <img class="review-avatar" src="/img/메가커피.png" alt="avatar">
+          <div class="review-info">
+            <h3>Mega Coffee <span class="region">Busan Haeundae</span></h3>
+            <p class="date">📅 2nd July, 2023</p>
+            <p class="stars">★★★☆☆</p>
+          </div>
+        </div>
+        <p class="review-text">공간은 넓지만 사람이 많아 약간 소란스러움. 가격 대비 양은 만족스러움.</p>
+        <button class="edit-review-btn">✏️</button>
+      </div>
+    </section>
+
+    <!-- 즐겨찾기 -->
+    <section class="favorites">
+      <h2>My Preferences</h2>
+      <div class="store-card">
+        <img src="/img/스타벅스죽전단국대점.png" alt="store">
+        <div>
+          <h4>스타벅스 죽전 단국대점</h4>
+          <p>TAGS: Cafe, Calm</p>
+        </div>
+        <button>+</button>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

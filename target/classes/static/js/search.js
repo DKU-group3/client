@@ -17,7 +17,6 @@ tags.forEach(tag => {
   });
 });
 
-// 선택된 태그 표시
 function updateSelectedTags() {
   selectedTagsBox.innerHTML = "";
 
@@ -41,13 +40,15 @@ function updateSelectedTags() {
   });
 }
 
-// 초기화 버튼
 clearAllBtn.addEventListener('click', () => {
   document.querySelectorAll('.tag.active').forEach(tag => tag.classList.remove('active'));
   updateSelectedTags();
 });
 
-// 스크롤 이동
+document.querySelector(".search-button").addEventListener("click", function () {
+  window.location.href = "/mappage";
+});
+
 document.querySelectorAll('[data-scroll]').forEach(button => {
   button.addEventListener('click', () => {
     const target = document.querySelector(button.dataset.scroll);
