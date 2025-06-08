@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>TAGGO</title>
+  <title>TAGGO Map Page</title>
   <link rel="stylesheet" href="/css/mappage.css">
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=85a826211669beef69cfd8a88c12e06c"></script>
+  <script defer src="/js/sidebar.js"></script>
+  <script defer src="/js/mappage.js"></script>
 </head>
 <body>
+
+  <!-- 사이드바 -->
+  <aside class="sidebar collapsed" id="sidebar">
+    <div class="sidebar-title">
+      <span id="toggleBtn">☰</span>
+      <span class="sidebar-label">Navigation Bar</span>
+    </div>
+    <nav class="nav-popup">
+      <ul>
+        <li><a href="/mappage">📍 <span class="nav-text">Map Page</span></a></li>
+        <li><a href="/search">🔍 <span class="nav-text">Search</span></a></li>
+        <li><a href="/mypage">👤 <span class="nav-text">My Profile</span></a></li>
+        <li><a href="/label">🏷️ <span class="nav-text">Tags</span></a></li>
+        <li>
+          <button id="locateBtn" class="sidebar-button">🎯 <span class="nav-text">내 위치</span></button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- 콘텐츠 -->
   <div class="container">
-
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <button class="nav-button">☰</button>
-      <nav class="nav-popup hidden">
-        <ul>
-          <li><a href="#">Search with LLM</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Main</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- Map View -->
     <main class="map-view">
-      <!-- 지도 API가 여기 들어감 -->
       <div id="map">지도 로딩 중...</div>
     </main>
 
-    <!-- Shop List -->
     <section class="shop-list">
-      <!-- JS로 동적으로 카드 렌더링 가능 -->
-      <div class="shop-card">가게 카드 예시</div>
-      <div class="shop-card">가게 카드 예시</div>
+      <div class="shop-card">가게 카드 예시 1</div>
+      <div class="shop-card">가게 카드 예시 2</div>
     </section>
 
-    <!-- Tag Filter -->
     <footer class="tag-filter">
       <div class="tag-section">
         <h4>Restaurant Type</h4>
@@ -43,11 +49,8 @@
         <h4>Atmosphere</h4>
         <button>Calm</button><button>Relaxing</button>
       </div>
-      <!-- 계속 추가 가능 -->
       <button class="search-button">GO! search</button>
     </footer>
-
   </div>
-  <script src="/js/main.js"></script>
 </body>
 </html>
