@@ -1,3 +1,4 @@
+!-- mappage.html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -9,7 +10,6 @@
   <script defer src="/js/mappage.js"></script>
 </head>
 <body>
-
   <!-- 사이드바 -->
   <aside class="sidebar collapsed" id="sidebar">
     <div class="sidebar-title">
@@ -35,21 +35,17 @@
       <div id="map">지도 로딩 중...</div>
     </main>
 
-    <section class="shop-list">
-      <div class="shop-card">가게 카드 예시 1</div>
-      <div class="shop-card">가게 카드 예시 2</div>
-    </section>
+    <section class="shop-list"></section>
 
-     <!-- Tag Filter -->
     <footer class="tag-filter">
-      <input id="searchQuery" type="text" placeholder="검색어를 입력하세요" />
-      <div class="tag-section" id="tagsContainer">
-        <!-- 태그 버튼이 동적으로 채워집니다 -->
+      <!-- 검색 바 + GO 버튼 -->
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="검색어를 입력하세요" />
+        <button id="searchBtn" class="search-button">GO! search</button>
       </div>
-      <button class="search-button">GO! search</button>
+      <!-- 백엔드에서 받아올 태그들이 이곳에 동적 생성됩니다 -->
+      <div id="tagsContainer" class="tags-container"></div>
     </footer>
-
   </div>
-  
 </body>
 </html>
